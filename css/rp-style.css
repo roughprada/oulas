@@ -1,0 +1,690 @@
+/*sss 2*/
+
+.grid {
+	position: relative;
+	clear: both;
+	margin: 0 auto;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+
+/* Common style */
+.grid figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	text-align: centre;
+	cursor: pointer;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+/*	min-height: 100%;*/
+	max-width: 100%;
+}
+
+.grid figure figcaption{
+	padding: 17px 15px;
+	color: #000;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+}
+
+/* Individual effects */
+
+/*---------------*/
+/***** Zoe *****/
+/*---------------*/
+
+figure.effect-zoe figcaption {
+	top: auto;
+	bottom: 0;
+	height: 3.75em;
+	background: #fff;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+}
+
+figure.effect-zoe h2 {
+	float: left;
+}
+
+figure.effect-zoe p.icon-links a {
+	float: right;
+	color: #3c4a50;
+}
+
+figure.effect-zoe:hover p.icon-links a:hover,
+figure.effect-zoe:hover p.icon-links a:focus {
+	color: #252d31;
+}
+
+figure.effect-zoe p.description {
+	position: absolute;
+	bottom: 8em;
+	padding: 2em;
+	color: #fff;
+	text-transform: none;
+	font-size: 90%;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+	-webkit-backface-visibility: hidden; /* Fix for Chrome 37.0.2062.120 (Mac) */
+}
+
+figure.effect-zoe h2,
+figure.effect-zoe p.icon-links a {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,200%,0);
+	transform: translate3d(0,200%,0);
+}
+
+figure.effect-zoe p.icon-links a span::before {
+	display: inline-block;
+	padding: 8px 10px;
+	font-family: 'feathericons';
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-eye::before {
+	content: '\e000';
+}
+
+.icon-paper-clip::before {
+	content: '\e001';
+}
+
+.icon-heart::before {
+	content: '\e024';
+}
+
+figure.effect-zoe h2 {
+	display: inline-block;
+}
+
+figure.effect-zoe:hover p.description {
+	opacity: 1;
+}
+
+figure.effect-zoe:hover figcaption,
+figure.effect-zoe:hover h2,
+figure.effect-zoe:hover p.icon-links a {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-zoe:hover h2 {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+figure.effect-zoe:hover p.icon-links a:nth-child(3) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+figure.effect-zoe:hover p.icon-links a:nth-child(2) {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+figure.effect-zoe:hover p.icon-links a:first-child {
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+/*-----------------*/
+/***** Goliath *****/
+/*-----------------*/
+
+figure.effect-goliath {
+	background: none;
+}
+
+figure.effect-goliath img,
+figure.effect-goliath h2 {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+}
+
+figure.effect-goliath img {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+figure.effect-goliath h2,
+figure.effect-goliath p {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 15px;
+}
+
+figure.effect-goliath p {
+	text-transform: none;
+	font-size: 90%;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(0,50px,0);
+	transform: translate3d(0,50px,0);
+}
+
+figure.effect-goliath:hover img {
+	-webkit-transform: translate3d(0,-55px,0);
+	transform: translate3d(0,-55px,0);
+}
+
+figure.effect-goliath:hover h2 {
+	-webkit-transform: translate3d(0,-100px,0);
+	transform: translate3d(0,-100px,0);
+}
+
+figure.effect-goliath:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+/* Media queries */
+@media screen and (max-width: 50em) {
+	.grid figure {
+		display: inline-block;
+		float: none;
+		margin: 10px auto;
+		width: 100%;
+	}
+}
+
+/*--------------*/
+.wrapper {
+    position: relative;
+    padding: 0;
+    width:100%;
+    display:block;
+}
+.text {
+    position: absolute;
+    top: 0;
+    color:#f00;
+    background-color:rgba(255,255,255,0.8);
+    width: 100px;
+    height: 100px;
+    line-height:100px;
+    text-align: center;
+    z-index: 1000000;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.text:hover {
+    opacity:1;
+}
+
+img {
+    z-index:1;
+}
+
+
+body {
+    font-family: 'Didact Gothic', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #FBFBFB;
+    font-size: 18px;
+    line-height: 1.428571429;
+    color: #080321;
+}
+
+/*sss 1*/
+
+.sss {
+	height: 0;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+
+.ssslide {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	overflow: hidden;
+}
+
+.ssslide img {
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	display: block;
+}
+
+.sssnext, .sssprev {
+	width: 25px;
+	height: 100%;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	background: url('../case/arrow.png') no-repeat;
+	z-index: 1000;
+}
+
+.sssprev {
+	left: 5%;
+	background-position: 0 75px;
+}
+
+.sssnext {
+	right: 4.3%;
+	background-position: -26px 75px;
+}
+
+.sssprev:hover, .sssnext:hover {
+	cursor: pointer;
+}
+
+/* make keyframes that tell the start state and the end state of our object */
+/* 
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+ 
+.fade-in {
+	opacity:0;   make things invisible upon start 
+	-webkit-animation:fadeIn ease-in 1;   call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time 
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+ 
+	-webkit-animation-fill-mode:forwards;   this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+ 
+	-webkit-animation-duration:1.2s;
+	-moz-animation-duration:1.2s;
+	animation-duration:1,2s;
+}
+ 
+.fade-in.one {
+	-webkit-animation-delay: 0.1s;
+	-moz-animation-delay: 0.1s;
+	animation-delay: 0.1s;
+}
+
+.fade-in.two {
+	-webkit-animation-delay: 0.3s;
+	-moz-animation-delay: 0.3s;
+	animation-delay: 0.3s;
+}
+
+.fade-in.end {
+    	transition: all 1s ease-in-out;
+    	opacity: 0;
+    }
+*/
+.imgheader {
+    display: block;
+    width: 100%;
+/*    padding-right: 20px;*/
+}
+
+.home {
+	background-color:white;
+	padding: 45px 0;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 140px;
+	background-color: #080321;
+	color: #DADADA;
+    padding: 2vw 3vw;
+}
+
+.leftbox {
+    padding: 0 30px 0 0;
+}
+
+.introtext {
+	margin: 90px 0px;
+}
+
+/*.introtext h1 {
+  line-height: 1em;
+  font-size: 32px;
+}
+
+.introtext h1 a {
+  line-height: 1em;
+  font-size: 32px;
+  color:#2d76f9;
+}*/
+
+.intro {
+    margin-bottom: 40px;
+}
+
+.imgleft {
+	padding: 0 5px 10px 0;
+	width: 100%;
+}
+
+.imgright {
+	padding: 0 0 10px 5px;
+	width: 100%;
+}
+
+@media (max-width: 600px) {
+	.leftbox {
+	    padding: 0 0px 0 0;
+	}
+
+	.introtext {
+		margin: 50px 10px;
+	}
+
+	.intro {
+	    margin-bottom: 0px;
+	}
+
+	.imgleft {
+		padding: 0 0 10px 0;
+		width: 100%;
+	}
+
+	.imgright {
+		padding: 0 0 10px 0;
+		width: 100%;
+	}
+	.introtext h1 {
+	  line-height: 1em;
+	  font-size: 1.4em;
+	}
+}
+
+.firstdiv {
+	padding-top: 64px;
+}
+
+
+/*Masonry*/
+
+* { box-sizing: border-box; }
+
+/* ---- grid ---- */
+
+.grid {
+  max-width: 100%;
+  margin: auto auto;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid-item {
+  width: 99%;
+  height: auto;
+  float: left;
+  padding: 2px;
+  margin-bottom: 2px;
+}
+
+.grid-item--width2 { max-width: 320px; }
+.grid-item--width3 { max-width: 480px; }
+.grid-item--width4 { max-width: 630px; }
+.grid-item--width5 { max-width: 900px; }
+
+.grid-item--height2 { height: 196px; }
+.grid-item--height3 { height: 256px; }
+.grid-item--height4 { height: 356px; }
+.grid-item--height5 { height: 552px; }
+
+.caption  { position: absolute; }
+
+@media only screen and (max-width : 768px) { 
+		.grid-item {
+		width: 100% !important;
+		height: auto;
+		margin: auto;
+		margin-bottom: 2px;
+	}
+	.grid-item--width2 { max-width: 100%; }
+	.grid-item--width3 { max-width: 100%; }
+	.grid-item--width4 { max-width: 100%; }
+	.grid-item--width5 { max-width: 100%; }
+ }
+@media only screen and (min-width : 768px) { 
+		.grid {
+		width: 100%;
+		max-width: 1600px;
+		height: auto;
+		margin: auto;
+	}
+ }
+
+img {
+  width: 100%;
+}
+
+/*text on project card*/
+
+.summary-container {
+    width: 100%;
+    text-align: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row /* works with row or column */ flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    opacity: 0;
+	transform: translateY(-15px);
+    transition opacity: 600ms cubic-bezier(0.19, 1, 0.22, 1), transform 600ms cubic-bezier(0.19, 1, 0.22, 1);
+    transition-delay: 200ms;
+}
+
+.foot a:hover {
+		color: #f71c3c;
+		-o-transition:.4s;
+		-ms-transition:.4s;
+		-moz-transition:.4s;
+		-webkit-transition:.4s;
+		  /* ...and now for the proper property */
+		transition:.4s;
+}
+
+html {
+	background-color: #080321;
+}
+
+.WNW span{
+	text-decoration: line-through;
+}
+.hero a {
+	font-size: 18px;
+}
+.hero a:hover {
+	font-size: 18px;
+}
+.hero h2 {
+	font-size: 30px;
+	font-weight: 800;
+}
+.hero h2 a {
+	font-size: 30px;
+	font-weight: 800;
+}
+.hero h2 a:hover {
+	font-size: 30px;
+	font-weight: 800;
+	text-decoration: underline;
+	-o-transition:.4s;
+	-ms-transition:.4s;
+	-moz-transition:.4s;
+	-webkit-transition:.4s;
+	transition:.4s;
+}
+.toobig {
+font-size: 5.5vw;
+line-height: 1.1em;
+font-family: 'Anton', sans-serif;
+color: white;
+text-transform: uppercase;
+}
+
+.toobig a {
+	font-size: 5.5vw;
+	line-height: 1.1em;
+	font-family: 'Anton', sans-serif;
+	text-transform: uppercase;
+}
+.toobig a:hover {
+	color: #f71c3c;
+	-o-transition:.4s;
+	-ms-transition:.4s;
+	-moz-transition:.4s;
+	-webkit-transition:.4s;
+	transition:.4s;
+}
+.talks {
+	background-color: #080321;
+	color: white;
+}
+.talks a {
+	font-size: 18px;
+	color: white;
+}
+.talks a:hover {
+	font-size: 18px;
+	text-decoration: underline;
+	-o-transition:.4s;
+	-ms-transition:.4s;
+	-moz-transition:.4s;
+	-webkit-transition:.4s;
+	transition:.4s;
+}
+
+.talks a:visited {
+	font-size: 18px;
+}
+
+.talks a:focus {
+	font-size: 18px;
+}
+
+@media only screen and (max-width: 768px) {
+/* For mobile phones: */
+	.toobig {
+		font-size: 12vw;
+		letter-spacing: 1.5px;
+		color: white;
+	}
+	.toobig a {
+		font-size: 12vw;
+		line-height: 0em;
+		letter-spacing: -1px;
+		font-family: 'Anton', sans-s
+	}
+	.talks h1{
+		font-size: 14vw;
+		font-family: 'Anton', sans-s
+	}
+	.hero h1 {
+		font-size: 14vw;
+		font-family: 'Anton', sans-s
+	}
+	.hero h2 {
+		font-size: 22px;
+		font-weight: 800;
+	}
+	.hero h2 a {
+		font-size: 22px;
+		font-weight: 800;
+	}
+	.hero h2 a:hover {
+		font-size: 22px;
+		font-weight: 800;
+		-o-transition:.4s;
+		-ms-transition:.4s;
+		-moz-transition:.4s;
+		-webkit-transition:.4s;
+		transition:.4s;
+	}
+}
